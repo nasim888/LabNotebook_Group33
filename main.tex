@@ -7,7 +7,9 @@
 \usepackage{setspace}
 \usepackage{tcolorbox}
 \usepackage{array}
-
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{margin=1in}
 % Document starts here
 \begin{document}
 
@@ -449,5 +451,65 @@ Error! Operator is not correct.
 
 \section*{Conclusion}
 This program demonstrates the basic use of arithmetic operations in C using a simple calculator interface. It covers user input, arithmetic operations, and basic error handling, providing a user-friendly experience.
+
+\vspace{250pt}
+\begin{center}
+\textbf{Lab Entry By}\\
+Sk Wasim Afrose
+\end{center}
+
+\vspace{15pt}
+
+\noindent\textbf{Assignment 3. Changing the submit button to Chin Tapak Dum Dum and fixing the disproportionate}
+
+\vspace{15pt}
+\begin{center}
+\noindent\textbf{STEPS}
+
+\vspace{15pt}
+
+\noindent Changed the submit button to `Chin tapak Dum Dum' through this code.
+\end{center}
+\vspace{25pt}
+
+\noindent\textbf{Figure 1: JAVA CODE}
+
+\begin{verbatim}
+    
+    add(symbolPanel, BorderLayout.CENTER);
+    
+    // Panel for submit button
+    Panel controlPanel = new Panel(new FlowLayout());
+    submitButton = new Button("Chin Tapak Dum Dum");
+    submitButton.setFont(new Font("Arial", Font.BOLD, 20));
+    submitButton.setBackground(Color.BLUE);
+    submitButton.setForeground(Color.WHITE);
+    submitButton.addActionListener(this);
+    controlPanel.add(submitButton);
+    add(controlPanel, BorderLayout.SOUTH);
+
+\end{verbatim}
+
+
+\vspace{15pt}
+
+\noindent\textbf{Changes made:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Font Size and Style:} The font size and style have been adjusted for improved readability and consistency with the overall design.
+    \item \textbf{Background Color:} The background color of the button has been updated to create a more visually appealing and cohesive look.
+    \item \textbf{Font Color:} The font color has been modified to ensure strong contrast with the background, enhancing legibility.
+    \item \textbf{Element Proportions:} Any disproportionate elements have been corrected to achieve a more balanced and aesthetically pleasing design.
+\end{itemize}
+
+\vspace{230pt}
+
+\begin{center}
+\noindent\textbf{Figure 2: FINAL OUTPUT}
+\end{center}
+\vspace{10pt}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Screenshot 2024-09-22 133507.png} \\[5pt]
+\end{center}
 
 \end{document}
