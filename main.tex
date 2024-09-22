@@ -302,6 +302,152 @@ This project would not have been possible without the contributions of all these
     \item You can also create a new repository directly from GitHub Desktop.
 \end{itemize}
 
+\vspace{260pt}
+\begin{center}
+\textbf{Lab Entry By}\\
+Pronab Sarkar
+\end{center}
+\noindent\textbf{Assignment 2. Create a local repository. Build a C programme of calculator in the local repository, commit and publish it as a public repository}
+\section*{Introduction}
+This program is a simple calculator written in C, designed to perform basic arithmetic operations (addition, subtraction, multiplication, and division) based on user input. The user is prompted to enter two numbers, and then they choose an arithmetic operator (+, -, *, /) to perform the corresponding operation.
 
+\section*{How the Program Works}
+\begin{itemize}
+    \item \textbf{Input:} The program first asks the user to input two floating-point numbers (decimal numbers) and stores them in the variables \texttt{x} and \texttt{y}.
+    
+    \item \textbf{Choosing an Operation:} The user is prompted to enter a symbol for the arithmetic operation they wish to perform:
+    \begin{itemize}
+        \item \texttt{+} for addition
+        \item \texttt{-} for subtraction
+        \item \texttt{*} for multiplication
+        \item \texttt{/} for division
+    \end{itemize}
+
+    \item \textbf{Switch-Case Logic:} The program then uses a switch statement to determine which operation to perform based on the symbol entered by the user:
+    \begin{itemize}
+        \item If the user enters \texttt{+}, the program adds the two numbers and prints the result.
+        \item If the user enters \texttt{-}, the program subtracts the second number from the first and prints the result.
+        \item If the user enters \texttt{*}, the program multiplies the two numbers and prints the result.
+        \item If the user enters \texttt{/}, the program divides the first number by the second and prints the result. (Note: Division by zero is not handled in this program).
+    \end{itemize}
+    
+    \item \textbf{Error Handling:} If the user enters an invalid operator (anything other than \texttt{+}, \texttt{-}, \texttt{*}, or \texttt{/}), the program prints an error message and terminates.
+\end{itemize}
+
+\section*{Code Explanation}
+\begin{verbatim}
+#include <stdio.h>
+
+int main() {
+    float x, y;
+    char ch;
+
+    printf("Enter first number:\n");
+    scanf("%f", &x);
+
+    printf("Enter the second number:\n");
+    scanf("%f", &y);
+
+    printf("Enter\n+ for add\n- for sub\n* for multi\n/ for div\n");
+    scanf(" %c", &ch);
+
+    switch(ch) {
+        case '+':
+            printf("Add = %f\n", (x + y));
+            break;
+        case '-':
+            printf("Sub = %f\n", (x - y));
+            break;
+        case '*':
+            printf("Multi = %f\n", (x * y));
+            break;
+        case '/':
+            if (y != 0)
+                printf("Div = %f\n", (x / y));
+            else
+                printf("Error! Division by zero.\n");
+            break;
+        default:
+            printf("Error! Operator is not correct.\n");
+            return 1;
+    }
+    return 0;
+}
+\end{verbatim}
+
+\section*{Function Explanations with Output Values}
+\subsection*{1. Addition (+)}
+If the user inputs \texttt{+}, the program adds \texttt{x} and \texttt{y} and prints the result.
+\begin{verbatim}
+Example Output:
+Enter first number: 
+5 
+Enter the second number: 
+3 
++ 
+Add = 8.000000
+\end{verbatim}
+
+\subsection*{2. Subtraction (-)}
+If the user inputs \texttt{-}, the program subtracts \texttt{y} from \texttt{x} and prints the result.
+\begin{verbatim}
+Example Output:
+Enter first number: 
+10 
+Enter the second number: 
+4 
+- 
+Sub = 6.000000
+\end{verbatim}
+
+\subsection*{3. Multiplication (*)}
+If the user inputs \texttt{*}, the program multiplies \texttt{x} by \texttt{y} and prints the result.
+\begin{verbatim}
+Example Output:
+Enter first number: 
+7 
+Enter the second number: 
+2 
+* 
+Multi = 14.000000
+\end{verbatim}
+
+\subsection*{4. Division (/)}
+If the user inputs \texttt{/}, the program divides \texttt{x} by \texttt{y} and prints the result, provided that \texttt{y} is not zero.
+\begin{verbatim}
+Example Output:
+Enter first number: 
+20 
+Enter the second number: 
+5 
+/ 
+Div = 4.000000
+\end{verbatim}
+
+If \texttt{y = 0}, the program will output an error message.
+\begin{verbatim}
+Example Output (Division by Zero):
+Enter first number: 
+10 
+Enter the second number: 
+0 
+/ 
+Error! Division by zero.
+\end{verbatim}
+
+\subsection*{5. Error Handling (Invalid Operator)}
+If the user inputs an invalid operator (not \texttt{+}, \texttt{-}, \texttt{*}, or \texttt{/}), the program will display an error message.
+\begin{verbatim}
+Example Output:
+Enter first number: 
+8 
+Enter the second number: 
+2 
+% 
+Error! Operator is not correct.
+\end{verbatim}
+
+\section*{Conclusion}
+This program demonstrates the basic use of arithmetic operations in C using a simple calculator interface. It covers user input, arithmetic operations, and basic error handling, providing a user-friendly experience.
 
 \end{document}
